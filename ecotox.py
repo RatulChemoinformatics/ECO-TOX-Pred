@@ -23,7 +23,7 @@ st.info('ECO-TOX-Pred allows users to predict toxicity of a query molecule again
 # loading the saved models
 bioactivity_first_model = pickle.load(open('pubchem.pkl', 'rb'))
 bioactivity_second_model = pickle.load(open('substructure.pkl', 'rb'))
-bioactivity_third_model = pickle.load(open('descriptors.pkl', 'rb'))
+bioactivity_third_model = pickle.load(open('descriptor.pkl', 'rb'))
 
 # Define the tabs
 tab1,tab2,tab3,tab4,tab5,tab6,tab7 = st.tabs(['Main', 'About', 'What is EC0-TOX-Pred?', 'Dataset', 'Model performance', 'Python libraries', 'Citing us'])
@@ -237,7 +237,7 @@ if selected == 'Dario rerio ecotox prediction model using 1D and 2D molecular de
 
             # Read descriptor list used in previously built model
             st.header('**Subset of descriptors from previously built models**')
-            Xlist = list(pd.read_csv('descriptors.csv').columns)
+            Xlist = list(pd.read_csv('descriptor.csv').columns)
             desc_subset = desc[Xlist]
             st.write(desc_subset)
             st.write(desc_subset.shape)
