@@ -70,7 +70,7 @@ if selected == 'Dario rerio ecotox prediction model using pubchemfingerprints':
         # Apply model to make predictions
         prediction = bioactivity_first_model.predict(input_data)
         st.header('**Prediction output**')
-        prediction_output = pd.Series(prediction, name='pIC50')
+        prediction_output = pd.Series(prediction, name='pEC50')
         molecule_name = pd.Series(load_data[1], name='molecule_name')
         df = pd.concat([molecule_name, prediction_output], axis=1)
         st.write(df)
@@ -137,7 +137,7 @@ elif selected == 'Dario rerio ecotox prediction model using substructurefingerpr
         # Apply model to make predictions
         prediction = bioactivity_second_model.predict(input_data)
         st.header('**Prediction output**')
-        prediction_output = pd.Series(prediction, name='pIC50')
+        prediction_output = pd.Series(prediction, name='pEC50')
         molecule_name = pd.Series(load_data[1], name='molecule_name')
         df = pd.concat([molecule_name, prediction_output], axis=1)
         st.write(df)
@@ -205,7 +205,7 @@ if selected == 'Dario rerio ecotox prediction model using 1D and 2D molecular de
         # Apply model to make predictions
         prediction = bioactivity_third_model.predict(input_data)
         st.header('**Prediction output**')
-        prediction_output = pd.Series(prediction, name='pIC50')
+        prediction_output = pd.Series(prediction, name='pEC50')
         molecule_name = pd.Series(load_data[1], name='molecule_name')
         df = pd.concat([molecule_name, prediction_output], axis=1)
         st.write(df)
