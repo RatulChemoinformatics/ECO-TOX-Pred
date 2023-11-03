@@ -31,7 +31,7 @@ tab1,tab2,tab3,tab4,tab5,tab6,tab7 = st.tabs(['Main', 'About', 'What is EC0-TOX-
 with tab1:
     st.title('Application Description')
     st.success(
-        " This module of [**ECO-TOX-Pred**](https://github.com/RatulChemoinformatics/MAO-B has been built to predict toxicity and identify dangerous pharmaceuticals against Dario rerio using robust machine learning algorithms."
+        " This module of [**ECO-TOX-Pred**](https://github.com/RatulChemoinformatics/ECO-TOX-Pred) has been built to predict toxicity and identify dangerous pharmaceuticals against Dario rerio using robust machine learning algorithms."
     )
 
 # Define a sidebar for navigation
